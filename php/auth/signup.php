@@ -2,7 +2,7 @@
 <html>
 <head>
  <title>SIGN UP</title>
- <link rel="stylesheet" type="text/css" href="css/loginNregister.css">
+ <link rel="stylesheet" type="text/css" href="../../css/loginNregister.css">
 </head>
 <body>
  <form action="signup-check.php" method="post">
