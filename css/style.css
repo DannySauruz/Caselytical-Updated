@@ -24,12 +24,29 @@ header{
 	position: fixed;
 	width: 100%;
 	z-index: 1000;
+	padding: 0.5rem 2%;
 }
-.container{
+
+.nav-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 	max-width: 1200px;
-	margin: 120px auto 0 auto;
-	padding: 0 16px;
+	margin: 0 auto;
+	position: relative;
 }
+
+.logo {
+	display: flex;
+	align-items: center;
+	z-index: 1001;
+}
+
+.logo img {
+	height: 40px;
+	width: auto;
+}
+
 .navbar{
 	display: flex;
 	gap: 2rem;
@@ -38,60 +55,55 @@ header{
 	margin: 0;
 	align-items: center;
 }
+
 .navbar a{
 	color: black;
 	font-size: 1.1rem;
 	font-weight: 500;
 	padding: 5px 0;
-	margin: 0px 30px;
-	transition: all .50s ease;
+	margin: 0px 15px;
+	transition: all .30s ease;
+	text-decoration: none;
 }
+
 .navbar a:hover{
 	color: var(--main-color);
 }
+
 .navbar a.active{
 	color: var(--main-color);
 }
-.logo{
-	display: flex;
-	align-items: center;
-}
-.logo img{
-	height: 40px;
-	margin-left: 1rem;
-}
+
 .main{
 	display: flex;
 	align-items: center;
 	gap: 1.5rem;
-	margin-left: auto;
 }
+
 .main a{
 	text-decoration: none;
 	color: #222;
 	font-weight: 500;
 	transition: color 0.2s;
-}
-.user{
 	display: flex;
 	align-items: center;
+	gap: 0.5rem;
 }
-.user i{
-	color:var(--main-color);
-	font-size: 28px;
-	margin-right: 7px;
+
+.user i, .cart i {
+	color: var(--main-color);
+	font-size: 20px;
 }
+
 .main a:hover{
-	color: #007bff;
-}
-.main h4:hover{
 	color: var(--main-color);
 }
+
 #menu-icon{
 	font-size: 35px;
 	color: black;
 	cursor: pointer;
-	z-index: 10001;
+	z-index: 1001;
 	display: none;
 }
 
@@ -102,7 +114,17 @@ header{
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	margin-top: 80px; /* Account for fixed header */
+}
 
+/* Main content spacing */
+body {
+	padding-top: 0;
+}
+
+/* Ensure content doesn't get hidden behind header */
+main, .content {
+	margin-top: 80px;
 }
 .swiper{
 	width: 80%;
@@ -224,53 +246,111 @@ footer{
 	margin-top: 1rem;
 }
 
-
-
-@media (max-width: 1280px){
+/* Tablet and smaller desktop styles */
+@media (max-width: 1024px){
 	header{
-		padding: 5px 2%;
-		transition: .2s;
+		padding: 0.5rem 3%;
 	}
 	.navbar a{
-		padding: 5px 0;
-		margin: 0px 20px;
+		margin: 0px 10px;
+		font-size: 1rem;
+	}
+	.main a span {
+		display: none;
+	}
+	.main {
+		gap: 1rem;
 	}
 }
 
-@media (max-width: 1090px){
+/* Mobile styles */
+@media (max-width: 768px){
 	#menu-icon{
-		display: black;
-	}
-	.navbar{
-		position: none;
-		top: 100%;
-		right: -1%;
-		width: 270px;
-		height: 12vh;
-		background: var(white);
 		display: block;
-		flex-direction: column;
-		justify-content: flex-start;
-		border-radius: 10px;
-		transition: all .50s ease;
 	}
+	
+	.navbar{
+		position: fixed;
+		top: 0;
+		right: -100%;
+		width: 100%;
+		height: 100vh;
+		background: rgba(255, 255, 255, 0.95);
+		backdrop-filter: blur(10px);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		transition: all 0.3s ease;
+		z-index: 1000;
+	}
+	
+	.navbar.open{
+		right: 0;
+	}
+	
 	.navbar a{
 		display: block;
-		margin: 25px 0;
-		padding: 0px 25px;
-		transition: all .50s ease;
+		margin: 20px 0;
+		padding: 15px 25px;
+		font-size: 1.2rem;
+		border-radius: 8px;
+		transition: all 0.3s ease;
+		background: rgba(255, 255, 255, 0.1);
+		backdrop-filter: blur(5px);
 	}
+	
 	.navbar a:hover{
 		color: var(--main-color);
-		transform: translateY(5px);
+		background: rgba(255, 107, 53, 0.1);
+		transform: translateX(10px);
 	}
-	.navbar a.active{
-		color: black;
+	
+	.main a span {
+		display: none;
 	}
-	.navbar.open{
-		right: 5%;
+	
+	.main {
+		gap: 0.8rem;
+	}
+	
+	.main a {
+		padding: 8px;
+		border-radius: 50%;
+		background: rgba(255, 107, 53, 0.1);
 	}
 }
+
+/* Extra small mobile styles */
+@media (max-width: 480px){
+	header {
+		padding: 0.5rem 4%;
+	}
+	
+	.logo img {
+		height: 35px;
+	}
+	
+	.main {
+		gap: 0.5rem;
+	}
+	
+	.main a {
+		padding: 6px;
+	}
+	
+	.main i {
+		font-size: 18px;
+	}
+}
+
+/* Large screen styles */
+@media (min-width: 1400px) {
+	.nav-container {
+		max-width: 1400px;
+	}
+}
+
 @media (max-width: 900px) {
     .container {
         max-width: 98vw;
