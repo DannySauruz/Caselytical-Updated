@@ -1,0 +1,144 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	text-decoration: none;
+}
+body {
+    background: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
+    color: #222;
+}
+
+.team{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background: radial-gradient(#281c3e,#0f051d);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.team-content{
+	width: 100%;
+	max-width: 1350px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+	align-items: center;
+	gap: 2rem;
+	text-align: center;
+	margin-top: 4rem;
+}
+.team-content img{
+	width: 100%;
+	height: auto;
+	border-radius: 15px;
+	margin-bottom: 15px;
+}
+.center h1{
+	color: #fff;
+	font-size: 4rem;
+	text-align: center;
+}
+.box{
+	padding: 16px;
+	background: #1b1229;
+	border-radius: 15px;
+	transition: all .38s ease;
+}
+.box h3{
+	font-size: 23px;
+	font-weight: 600;
+	color: #fff;
+	margin-bottom: 8px;
+}
+.box h5{
+	font-size: 15px;
+	font-weight: 600;
+	color: #b7b4bb;
+	margin-bottom: 15px;
+	letter-spacing: 2px;
+}
+.icons i{
+	display: inline-block;
+	color: #fff;
+	font-size: 20px;
+	margin: 0 8px;
+	transition: all .38s ease;
+}
+.icons i:hover{
+	transform: scale(1.2);
+}
+.box:hover{
+	transform: translateY(-10px);
+	cursor: pointer;
+}
+.navbar {
+    border-bottom: 1px solid #eee;
+}
+.team-card {
+    border-radius: 18px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+    transition: box-shadow 0.3s, transform 0.3s;
+    min-height: 320px;
+    background: #fff;
+}
+.team-card:hover {
+    box-shadow: 0 24px 48px rgba(0,0,0,0.16);
+    transform: translateY(-18px) scale(1.04);
+    z-index: 2;
+}
+.card-title {
+    font-size: 1.15rem;
+}
+.card-text {
+    font-size: 0.95rem;
+}
+.team .ri-twitter-fill,
+.team .ri-facebook-box-fill,
+.team .ri-instagram-fill {
+    font-size: 1.3rem;
+    transition: color 0.2s;
+}
+.team a:hover .ri-twitter-fill { color: #1da1f2; }
+.team a:hover .ri-facebook-box-fill { color: #1877f3; }
+.team a:hover .ri-instagram-fill { color: #e4405f; }
+
+.icon-link {
+    color: #222;
+    font-size: 1.3rem;
+    transition: color 0.2s;
+    padding: 0.2em 0.4em;
+    border-radius: 50%;
+}
+.icon-link:hover .ri-twitter-fill { color: #1da1f2; }
+.icon-link:hover .ri-facebook-box-fill { color: #1877f3; }
+.icon-link:hover .ri-instagram-fill { color: #e4405f; }
+
+h1, h5 {
+    font-family: 'Poppins', sans-serif;
+}
+
+.team .text-muted {
+    font-size: 0.98rem;
+}
+
+@media(max-width: 1240px){
+	.team{
+		width: 100%;
+		height: auto;
+		padding: 90px 2%;
+	}
+	.center h1{
+		font-size: 3.2rem;
+	}
+}
+@media (max-width: 767px) {
+    .team-card {
+        min-height: 0;
+        margin-bottom: 2rem;
+    }
+}

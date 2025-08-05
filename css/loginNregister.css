@@ -1,0 +1,139 @@
+body {
+    background: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+form {
+	width: 500px;
+	border: 2px solid #ccc;
+	padding: 30px;	
+	background: #fff;
+	border-radius: 15px;
+}
+
+h2 {
+	margin-bottom: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+label {
+	display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #222;
+}
+
+input[type="text"], input[type="password"] {
+	width: 100%;
+	padding: 0.7rem;
+	margin-bottom: 1.2rem;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	font-size: 1rem;
+	background: #f6f6f6;
+}
+
+button[type="submit"] {
+	width: 100%;
+	padding: 0.8rem;
+	background: #222;
+	color: #fff;
+	border: none;
+	border-radius: 8px;
+	font-size: 1rem;
+	font-weight: 500;
+	cursor: pointer;
+	margin-bottom: 1rem;
+	transition: background 0.2s;
+}
+
+button[type="submit"]:hover {
+	background: #007bff;
+}
+
+.error {
+	color: #d9534f;
+    background: #fbeaea;
+    border-radius: 6px;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.success {
+	background: #D4EDDA;
+	color: #40754C;
+	padding: 10px;
+	width: 95%;
+	border-radius: 5px;
+	margin: 20px auto;
+}
+
+h1 {
+	text-align: center;
+	color: #fff;
+}
+
+.ca {
+	display: block;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 0.98rem;
+}
+
+.ca:hover {
+	text-decoration: underline;
+}
+
+.profile-container {
+    background: #fff;
+    padding: 40px 32px;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+    min-width: 340px;
+    text-align: center;
+}
+
+.profile-greeting {
+    color: #222;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 32px;
+    letter-spacing: 0.5px;
+}
+
+.ProfileLogged-nav {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 0;
+}
+
+.ProfileLogged-nav a {
+    padding: 10px 18px;
+    color: #222;
+    background: #f7bd65;
+    border-radius: 8px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s;
+}
+
+.ProfileLogged-nav a:hover {
+    background: #222;
+    color: #f7bd65;
+}
